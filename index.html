@@ -3,270 +3,428 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CaesarCaimal - Profil Pribadi</title>
+    <title>Elektronik Apa Aja - Penjualan Laptop Berkualitas</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f5f5f5;
             color: #333;
         }
-        
         header {
-            background: linear-gradient(135deg, #3498db, #2c3e50);
+            background-color: #1976D2;
             color: white;
+            padding: 20px;
             text-align: center;
-            padding: 2rem 0;
         }
-        
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
+        nav {
+            background-color: #1565C0;
+            padding: 10px;
         }
-        
-        h1 {
+        nav ul {
+            list-style-type: none;
             margin: 0;
-            font-size: 2.5rem;
-        }
-        
-        h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 0.5rem;
-        }
-        
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 5px solid white;
-            margin-top: 20px;
-            object-fit: cover;
-        }
-        
-        section {
-            padding: 2rem 0;
-            background: white;
-            margin: 1rem 0;
-            border-radius: 5px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .skills-container {
+            padding: 0;
             display: flex;
+            justify-content: center;
             flex-wrap: wrap;
-            justify-content: space-between;
         }
-        
-        .skill {
-            flex-basis: 48%;
-            margin-bottom: 1rem;
-            background: #f4f4f4;
-            padding: 1rem;
-            border-radius: 5px;
-            position: relative;
+        nav li {
+            margin: 0 15px;
         }
-        
-        .skill h3 {
-            margin-top: 0;
-            color: #3498db;
-        }
-        
-        .skill-level {
-            height: 5px;
-            background: #ddd;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-        
-        .skill-level-bar {
-            height: 100%;
-            border-radius: 5px;
-            background: #3498db;
-        }
-        
-        .expert { width: 95%; }
-        .advanced { width: 80%; }
-        .intermediate { width: 65%; }
-        
-        footer {
-            text-align: center;
-            padding: 1.5rem 0;
-            background: #2c3e50;
+        nav a {
             color: white;
+            text-decoration: none;
+            font-weight: bold;
         }
-        
-        .qualities {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+        nav a:hover {
+            text-decoration: underline;
         }
-        
-        .quality {
-            width: 30%;
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .product {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 15px;
+            transition: transform 0.3s ease;
+        }
+        .product:hover {
+            transform: translateY(-5px);
+        }
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            background-color: #f0f0f0;
+        }
+        .product-info {
+            padding: 0 10px;
+        }
+        .price {
+            color: #1976D2;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .specs {
+            font-size: 0.9em;
+            color: #666;
+            margin: 10px 0;
+        }
+        button {
+            background-color: #1976D2;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #1565C0;
+        }
+        footer {
+            background-color: #1565C0;
+            color: white;
             text-align: center;
-            margin-bottom: 1.5rem;
-        }
-        
-        .quality-icon {
-            font-size: 2.5rem;
-            color: #3498db;
-            margin-bottom: 0.5rem;
-        }
-        
-        .coding-icon {
-            font-size: 1.5rem;
-            margin-right: 8px;
-            vertical-align: middle;
-        }
-        
-        @media (max-width: 768px) {
-            .skill, .quality {
-                flex-basis: 100%;
-                width: 100%;
-            }
+            padding: 20px;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            
-            <h1>Caesar Caimal</h1>
-            <p>Web Developer & Python Programmer</p>
-        </div>
+        <h1>Elektronik Apa Aja</h1>
+        <p>Temukan Laptop Terbaik untuk Kebutuhan Anda</p>
     </header>
     
-    <div class="container">
-        <section id="about">
-            <h2>Tentang Saya</h2>
-            <p>Halo! Nama saya Caesar Caimal. Saya adalah seorang pengembang web dengan keahlian khusus dalam HTML dan Python.</p>
-            <p>Saya memiliki passion dalam menciptakan solusi digital yang kreatif dan efisien. Dengan kemampuan coding yang kuat dan pemahaman mendalam tentang pengembangan web, saya selalu berusaha memberikan hasil terbaik dalam setiap proyek.</p>
-        </section>
+    <nav>
+        <ul>
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#products">Produk</a></li>
+            <li><a href="#about">Tentang Kami</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container" id="home">
+        <h2>Selamat Datang di Elektronik Apa Aja</h2>
+        <p>Kami menyediakan berbagai macam laptop berkualitas dari merek ternama dengan harga kompetitif dan garansi resmi.</p>
+    </div>
+    
+    <div class="container" id="products">
+        <h2>Produk Kami</h2>
         
-        <section id="skills">
-            <h2>Skill Saya</h2>
-            <div class="skills-container">
-                <div class="skill">
-                    <h3><span class="coding-icon">💻</span>HTML/CSS</h3>
-                    <p>Saya memiliki penguasaan yang sangat baik dalam HTML dan CSS, mampu membuat website yang responsif, aksesibel, dan estetik.</p>
-                    <div class="skill-level">
-                        <div class="skill-level-bar expert"></div>
+        <div class="products-grid">
+            <!-- Produk 1 -->
+            <div class="product">
+                <img src="https://via.placeholder.com/300x200?text=Asus+ROG+Zephyrus" alt="Asus ROG Zephyrus" class="product-image">
+                <div class="product-info">
+                    <h3>Asus ROG Zephyrus G14</h3>
+                    <div class="specs">
+                        <p>AMD Ryzen 9, RTX 3060, 16GB RAM, 1TB SSD</p>
+                        <p>14" QHD 120Hz, Windows 11</p>
                     </div>
-                </div>
-                
-                <div class="skill">
-                    <h3><span class="coding-icon">🐍</span>Python</h3>
-                    <p>Pengalaman luas dalam pengembangan dengan Python, termasuk scripting, otomatisasi, dan pengembangan web dengan framework seperti Django dan Flask.</p>
-                    <div class="skill-level">
-                        <div class="skill-level-bar expert"></div>
-                    </div>
-                </div>
-                
-                <div class="skill">
-                    <h3>Komunikasi Teknis</h3>
-                    <p>Mampu menjelaskan konsep teknis secara jelas kepada tim non-teknis dan stakeholders.</p>
-                    <div class="skill-level">
-                        <div class="skill-level-bar advanced"></div>
-                    </div>
-                </div>
-                
-                <div class="skill">
-                    <h3>Pengembangan Web</h3>
-                    <p>Pengalaman dalam membangun aplikasi web dari awal hingga deployment, dengan fokus pada user experience.</p>
-                    <div class="skill-level">
-                        <div class="skill-level-bar advanced"></div>
-                    </div>
-                </div>
-                
-                <div class="skill">
-                    <h3>Pemecahan Masalah</h3>
-                    <p>Kemampuan analitis yang kuat dalam debugging dan menyelesaikan masalah teknis yang kompleks.</p>
-                    <div class="skill-level">
-                        <div class="skill-level-bar expert"></div>
-                    </div>
-                </div>
-                
-                <div class="skill">
-                    <h3>Manajemen Proyek</h3>
-                    <p>Mampu mengelola timeline proyek dan berkolaborasi efektif dalam tim pengembangan.</p>
-                    <div class="skill-level">
-                        <div class="skill-level-bar intermediate"></div>
-                    </div>
+                    <p class="price">Rp 22.999.000</p>
+                    <button onclick="window.location.href='https://discord.gg/x97NWa9E'">Beli Sekarang</button>
                 </div>
             </div>
-        </section>
-        
-        <section id="qualities">
-            <h2>Sifat-Sifat Baik Saya</h2>
-            <div class="qualities">
-                <div class="quality">
-                    <div class="quality-icon">✓</div>
-                    <h3>Detail-Oriented</h3>
-                    <p>Memperhatikan setiap detail dalam kode untuk memastikan kualitas dan performa optimal.</p>
-                </div>
-                
-                <div class="quality">
-                    <div class="quality-icon">🔄</div>
-                    <h3>Adaptif</h3>
-                    <p>Cepat beradaptasi dengan teknologi dan tools pengembangan terbaru.</p>
-                </div>
-                
-                <div class="quality">
-                    <div class="quality-icon">🧠</div>
-                    <h3>Analitis</h3>
-                    <p>Pendekatan sistematis dalam memecahkan masalah pemrograman.</p>
-                </div>
-                
-                <div class="quality">
-                    <div class="quality-icon">🤝</div>
-                    <h3>Kolaboratif</h3>
-                    <p>Berkontribusi efektif dalam tim pengembangan dan code review.</p>
-                </div>
-                
-                <div class="quality">
-                    <div class="quality-icon">📚</div>
-                    <h3>Pembelajar</h3>
-                    <p>Selalu mengupdate pengetahuan dengan tren dan best practices terbaru.</p>
-                </div>
-                
-                <div class="quality">
-                    <div class="quality-icon">⚡</div>
-                    <h3>Efisien</h3>
-                    <p>Menulis kode yang bersih, modular, dan dapat dipelihara.</p>
+            
+            <!-- Produk 2 -->
+            <div class="product">
+                <img src="https://via.placeholder.com/300x200?text=MacBook+Pro+M2" alt="MacBook Pro M2" class="product-image">
+                <div class="product-info">
+                    <h3>MacBook Pro 14" M2 Pro</h3>
+                    <div class="specs">
+                        <p>Apple M2 Pro, 16GB RAM, 512GB SSD</p>
+                        <p>14.2" Liquid Retina XDR, macOS</p>
+                    </div>
+                    <p class="price">Rp 29.999.000</p>
+                    <button onclick="window.location.href='https://discord.gg/x97NWa9E'">Beli Sekarang</button>
                 </div>
             </div>
-        </section>
-        
-        <section id="projects">
-            <h2>Proyek Terkini</h2>
-            <div class="skills-container">
-                <div class="skill">
-                    <h3>Aplikasi Web Python</h3>
-                    <p>Mengembangkan aplikasi manajemen data menggunakan Python dan Flask dengan fitur autentikasi pengguna dan database SQL.</p>
-                </div>
-                <div class="skill">
-                    <h3>Website Portofolio</h3>
-                    <p>Membuat website portofolio responsif dengan HTML5, CSS3, dan JavaScript vanilla.</p>
+            
+            <!-- Produk 3 -->
+            <div class="product">
+                <img src="https://via.placeholder.com/300x200?text=Dell+XPS+15" alt="Dell XPS 15" class="product-image">
+                <div class="product-info">
+                    <h3>Dell XPS 15 9520</h3>
+                    <div class="specs">
+                        <p>Intel i7-12700H, 16GB RAM, 1TB SSD</p>
+                        <p>15.6" 4K UHD+, Windows 11 Pro</p>
+                    </div>
+                    <p class="price">Rp 27.500.000</p>
+                    <button onclick="window.location.href='https://discord.gg/x97NWa9E'">Beli Sekarang</button>
                 </div>
             </div>
-        </section>
-        
-        <section id="contact">
-            <h2>Kontak</h2>
-            <p>Jika Anda tertarik untuk berkolaborasi atau memiliki pertanyaan, silakan hubungi saya melalui:</p>
-            <p>📧 Email: <a href="mailto:caesarcaimal@gmail.com">caesarcaimal@gmail.com</a></p>
-            <p>📞 Telepon: <a href="tel:+6281288711935">0812 8871 1935</a></p>
-        </section>
+            
+            <!-- Produk 4 -->
+            <div class="product">
+                <img src="https://via.placeholder.com/300x200?text=Lenovo+Legion+5" alt="Lenovo Legion 5" class="product-image">
+                <div class="product-info">
+                    <h3>Lenovo Legion 5 Pro</h3>
+                    <div class="specs">
+                        <p>AMD Ryzen 7, RTX 3070, 32GB RAM, 1TB SSD</p>
+                        <p>16" WQXGA 165Hz, Windows 11</p>
+                    </div>
+                    <p class="price">Rp 25.750.000</p>
+                    <button onclick="window.location.href='https://discord.gg/x97NWa9E'">Beli Sekarang</button>
+                </div>
+            </div>
+            
+            <!-- Produk 5 -->
+            <div class="product">
+                <img src="https://via.placeholder.com/300x200?text=Acer+Swift+3" alt="Acer Swift 3" class="product-image">
+                <div class="product-info">
+                    <h3>Acer Swift 3</h3>
+                    <div class="specs">
+                        <p>Intel i5-1135G7, 8GB RAM, 512GB SSD</p>
+                        <p>14" FHD IPS, Windows 11</p>
+                    </div>
+                    <p class="price">Rp 10.999.000</p>
+                    <button onclick="window.location.href='https://discord.gg/x97NWa9E'">Beli Sekarang</button>
+                </div>
+            </div>
+            
+            <!-- Produk 6 -->
+            <div class="product">
+                <img src="https://via.placeholder.com/300x200?text=HP+Spectre+x360" alt="HP Spectre x360" class="product-image">
+                <div class="product-info">
+                    <h3>HP Spectre x360</h3>
+                    <div class="specs">
+                        <p>Intel i7-1165G7, 16GB RAM, 1TB SSD</p>
+                        <p>13.5" 3K2K OLED Touch, Windows 11</p>
+                    </div>
+                    <p class="price">Rp 21.500.000</p>
+                    <button onclick="window.location.href='https://discord.gg/x97NWa9E'">Beli Sekarang</button>
+                </div>
+            </div>
+            
+            <!-- Produk 7 -->
+            <div class="product">
+                <img src="https://via.placeholder.com/300x200?text=MSI+Katana+GF66" alt="MSI Katana GF66" class="product-image">
+                <div class="product-info">
+                    <h3>MSI Katana GF66</h3>
+                    <div class="specs">
+                        <p>Intel i7-12650H, RTX 3060, 16GB RAM, 512GB SSD</p>
+                        <p>15.6" FHD 144Hz, Windows 11</p>
+                    </div>
+                    <p class="price">Rp 18.999.000</p>
+                    <button onclick="window.location.href='https://discord.gg/x97NWa9E'">Beli Sekarang</button>
+                </div>
+            </div>
+            
+            <!-- Produk 8 -->
+            <div class="product">
+                <img src="https://via.placeholder.com/300x200?text=Microsoft+Surface+Laptop+5" alt="Microsoft Surface Laptop 5" class="product-image">
+                <div class="product-info">
+                    <h3>Surface Laptop 5</h3>
+                    <div class="specs">
+                        <p>Intel i5-1235U, 8GB RAM, 256GB SSD</p>
+                        <p>13.5" PixelSense Touch, Windows 11</p>
+                    </div>
+                    <p class="price">Rp 15.750.000</p>
+                    <button onclick="window.location.href='https://discord.gg/x97NWa9E'">Beli Sekarang</button>
+                </div>
+            </div>
+            
+            <!-- Produk 9 -->
+            <div class="product">
+                <img src="https://via.placeholder.com/300x200?text=Razer+Blade+15" alt="Razer Blade 15" class="product-image">
+                <div class="product-info">
+                    <h3>Razer Blade 15</h3>
+                    <div class="specs">
+                        <p>Intel i7-12800H, RTX 3070 Ti, 16GB RAM, 1TB SSD</p>
+                        <p>15.6" QHD 240Hz, Windows 11</p>
+                    </div>
+                    <p class="price">Rp 35.999.000</p>
+                    <button onclick="window.location.href='https://discord.gg/x97NWa9E'">Beli Sekarang</button>
+                </div>
+            </div>
+            
+            <!-- Produk 10 -->
+            <div class="product">
+                <img src="https://via.placeholder.com/300x200?text=LG+Gram+17" alt="LG Gram 17" class="product-image">
+                <div class="product-info">
+                    <h3>LG Gram 17</h3>
+                    <div class="specs">
+                        <p>Intel i7-1260P, 16GB RAM, 1TB SSD</p>
+                        <p>17" WQXGA IPS, Windows 11</p>
+                    </div>
+                    <p class="price">Rp 24.500.000</p>
+                    <button onclick="window.location.href='https://discord.gg/x97NWa9E'">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <!-- Produk 11 -->
+            <div class="product">
+                <img src="https://via.placeholder.com/300x200?text=Asus+TUF+Gaming" alt="Asus TUF Gaming" class="product-image">
+                <div class="product-info">
+                    <h3>Asus TUF Gaming F15</h3>
+                    <div class="specs">
+                        <p>Intel i5-11400H, RTX 3050, 8GB RAM, 512GB SSD</p>
+                        <p>15.6" FHD 144Hz, Windows 11</p>
+                    </div>
+                    <p class="price">Rp 14.999.000</p>
+                    <button onclick="window.location.href='https://discord.gg/x97NWa9E'">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <!-- Produk 12 -->
+            <div class="product">
+                <img src="https://via.placeholder.com/300x200?text=Acer+Nitro+5" alt="Acer Nitro 5" class="product-image">
+                <div class="product-info">
+                    <h3>Acer Nitro 5 AN515</h3>
+                    <div class="specs">
+                        <p>AMD Ryzen 5, RTX 3050, 8GB RAM, 512GB SSD</p>
+                        <p>15.6" FHD 144Hz, Windows 11</p>
+                    </div>
+                    <p class="price">Rp 13.500.000</p>
+                    <button onclick="window.location.href='https://discord.gg/x97NWa9E'">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <!-- Produk 13 -->
+            <div class="product">
+                <img src="https://via.placeholder.com/300x200?text=Lenovo+IdeaPad+3" alt="Lenovo IdeaPad 3" class="product-image">
+                <div class="product-info">
+                    <h3>Lenovo IdeaPad 3</h3>
+                    <div class="specs">
+                        <p>AMD Ryzen 5, 8GB RAM, 512GB SSD</p>
+                        <p>15.6" FHD IPS, Windows 11</p>
+                    </div>
+                    <p class="price">Rp 9.999.000</p>
+                    <button onclick="window.location.href='https://discord.gg/x97NWa9E'">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <!-- Produk 14 -->
+            <div class="product">
+                <img src="https://via.placeholder.com/300x200?text=HP+Pavilion+15" alt="HP Pavilion 15" class="product-image">
+                <div class="product-info">
+                    <h3>HP Pavilion 15</h3>
+                    <div class="specs">
+                        <p>Intel i5-1135G7, 8GB RAM, 512GB SSD</p>
+                        <p>15.6" FHD IPS, Windows 11</p>
+                    </div>
+                    <p class="price">Rp 11.250.000</p>
+                    <button onclick="window.location.href='https://discord.gg/x97NWa9E'">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <!-- Produk 15 -->
+            <div class="product">
+                <img src="https://via.placeholder.com/300x200?text=MSI+Modern+14" alt="MSI Modern 14" class="product-image">
+                <div class="product-info">
+                    <h3>MSI Modern 14</h3>
+                    <div class="specs">
+                        <p>Intel i5-1155G7, 8GB RAM, 512GB SSD</p>
+                        <p>14" FHD IPS, Windows 11</p>
+                    </div>
+                    <p class="price">Rp 12.750.000</p>
+                    <button onclick="window.location.href='https://discord.gg/x97NWa9E'">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <!-- Produk 16 -->
+            <div class="product">
+                <img src="https://via.placeholder.com/300x200?text=Dell+Inspiron+15" alt="Dell Inspiron 15" class="product-image">
+                <div class="product-info">
+                    <h3>Dell Inspiron 15 3511</h3>
+                    <div class="specs">
+                        <p>Intel i5-1135G7, 8GB RAM, 512GB SSD</p>
+                        <p>15.6" FHD IPS, Windows 11</p>
+                    </div>
+                    <p class="price">Rp 11.999.000</p>
+                    <button onclick="window.location.href='https://discord.gg/x97NWa9E'">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <!-- Produk 17 -->
+            <div class="product">
+                <img src="https://via.placeholder.com/300x200?text=Asus+VivoBook+15" alt="Asus VivoBook 15" class="product-image">
+                <div class="product-info">
+                    <h3>Asus VivoBook 15</h3>
+                    <div class="specs">
+                        <p>AMD Ryzen 5, 8GB RAM, 512GB SSD</p>
+                        <p>15.6" FHD IPS, Windows 11</p>
+                    </div>
+                    <p class="price">Rp 10.500.000</p>
+                    <button onclick="window.location.href='https://discord.gg/x97NWa9E'">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <!-- Produk 18 -->
+            <div class="product">
+                <img src="https://via.placeholder.com/300x200?text=Lenovo+ThinkPad+E15" alt="Lenovo ThinkPad E15" class="product-image">
+                <div class="product-info">
+                    <h3>Lenovo ThinkPad E15</h3>
+                    <div class="specs">
+                        <p>Intel i5-1135G7, 8GB RAM, 512GB SSD</p>
+                        <p>15.6" FHD IPS, Windows 11 Pro</p>
+                    </div>
+                    <p class="price">Rp 14.250.000</p>
+                    <button onclick="window.location.href='https://discord.gg/x97NWa9E'">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <!-- Produk 19 -->
+            <div class="product">
+                <img src="https://via.placeholder.com/300x200?text=HP+Omen+16" alt="HP Omen 16" class="product-image">
+                <div class="product-info">
+                    <h3>HP Omen 16</h3>
+                    <div class="specs">
+                        <p>AMD Ryzen 7, RTX 3060, 16GB RAM, 1TB SSD</p>
+                        <p>16.1" QHD 165Hz, Windows 11</p>
+                    </div>
+                    <p class="price">Rp 23.999.000</p>
+                    <button onclick="window.location.href='https://discord.gg/x97NWa9E'">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <!-- Produk 20 -->
+            <div class="product">
+                <img src="https://via.placeholder.com/300x200?text=MSI+Prestige+14" alt="MSI Prestige 14" class="product-image">
+                <div class="product-info">
+                    <h3>MSI Prestige 14</h3>
+                    <div class="specs">
+                        <p>Intel i7-1195G7, 16GB RAM, 1TB SSD</p>
+                        <p>14" FHD IPS, Windows 11</p>
+                    </div>
+                    <p class="price">Rp 19.750.000</p>
+                    <button onclick="window.location.href='https://discord.gg/x97NWa9E'">Beli Sekarang</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container" id="about">
+        <h2>Tentang Kami</h2>
+        <p>Elektronik Apa Aja adalah toko online terpercaya yang menyediakan berbagai laptop berkualitas dari merek-merek ternama. Kami berkomitmen untuk memberikan produk asli dengan garansi resmi dan layanan purna jual yang terbaik.</p>
+    </div>
+    
+    <div class="container" id="contact">
+        <h2>Hubungi Kami</h2>
+        <p>Email: info@elektronikapaaja.com</p>
+        <p>Telepon: https://discord.gg/x97NWa9E</p>
+        <p>Alamat: Jl. Teknologi No. 123, Jakarta</p>
     </div>
     
     <footer>
-        <div class="container">
-            <p>&copy; 2023 Caesar Caimal - Web Developer & Python Programmer</p>
-        </div>
+        <p>&copy; 2023 Elektronik Apa Aja. Hak Cipta Dilindungi.</p>
     </footer>
 </body>
 </html>
