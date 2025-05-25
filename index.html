@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaesarCaimal - Profil Pribadi</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin-top: 20px;
+            object-fit: cover;
+        }
+        
+        section {
+            padding: 2rem 0;
+            background: white;
+            margin: 1rem 0;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .skill {
+            flex-basis: 48%;
+            margin-bottom: 1rem;
+            background: #f4f4f4;
+            padding: 1rem;
+            border-radius: 5px;
+            position: relative;
+        }
+        
+        .skill h3 {
+            margin-top: 0;
+            color: #3498db;
+        }
+        
+        .skill-level {
+            height: 5px;
+            background: #ddd;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        
+        .skill-level-bar {
+            height: 100%;
+            border-radius: 5px;
+            background: #3498db;
+        }
+        
+        .expert { width: 95%; }
+        .advanced { width: 80%; }
+        .intermediate { width: 65%; }
+        
+        footer {
+            text-align: center;
+            padding: 1.5rem 0;
+            background: #2c3e50;
+            color: white;
+        }
+        
+        .qualities {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        
+        .quality {
+            width: 30%;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .quality-icon {
+            font-size: 2.5rem;
+            color: #3498db;
+            margin-bottom: 0.5rem;
+        }
+        
+        .coding-icon {
+            font-size: 1.5rem;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+        
+        @media (max-width: 768px) {
+            .skill, .quality {
+                flex-basis: 100%;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            
+            <h1>Caesar Caimal</h1>
+            <p>Web Developer & Python Programmer</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section id="about">
+            <h2>Tentang Saya</h2>
+            <p>Halo! Nama saya Caesar Caimal. Saya adalah seorang pengembang web dengan keahlian khusus dalam HTML dan Python.</p>
+            <p>Saya memiliki passion dalam menciptakan solusi digital yang kreatif dan efisien. Dengan kemampuan coding yang kuat dan pemahaman mendalam tentang pengembangan web, saya selalu berusaha memberikan hasil terbaik dalam setiap proyek.</p>
+        </section>
+        
+        <section id="skills">
+            <h2>Skill Saya</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <h3><span class="coding-icon">💻</span>HTML/CSS</h3>
+                    <p>Saya memiliki penguasaan yang sangat baik dalam HTML dan CSS, mampu membuat website yang responsif, aksesibel, dan estetik.</p>
+                    <div class="skill-level">
+                        <div class="skill-level-bar expert"></div>
+                    </div>
+                </div>
+                
+                <div class="skill">
+                    <h3><span class="coding-icon">🐍</span>Python</h3>
+                    <p>Pengalaman luas dalam pengembangan dengan Python, termasuk scripting, otomatisasi, dan pengembangan web dengan framework seperti Django dan Flask.</p>
+                    <div class="skill-level">
+                        <div class="skill-level-bar expert"></div>
+                    </div>
+                </div>
+                
+                <div class="skill">
+                    <h3>Komunikasi Teknis</h3>
+                    <p>Mampu menjelaskan konsep teknis secara jelas kepada tim non-teknis dan stakeholders.</p>
+                    <div class="skill-level">
+                        <div class="skill-level-bar advanced"></div>
+                    </div>
+                </div>
+                
+                <div class="skill">
+                    <h3>Pengembangan Web</h3>
+                    <p>Pengalaman dalam membangun aplikasi web dari awal hingga deployment, dengan fokus pada user experience.</p>
+                    <div class="skill-level">
+                        <div class="skill-level-bar advanced"></div>
+                    </div>
+                </div>
+                
+                <div class="skill">
+                    <h3>Pemecahan Masalah</h3>
+                    <p>Kemampuan analitis yang kuat dalam debugging dan menyelesaikan masalah teknis yang kompleks.</p>
+                    <div class="skill-level">
+                        <div class="skill-level-bar expert"></div>
+                    </div>
+                </div>
+                
+                <div class="skill">
+                    <h3>Manajemen Proyek</h3>
+                    <p>Mampu mengelola timeline proyek dan berkolaborasi efektif dalam tim pengembangan.</p>
+                    <div class="skill-level">
+                        <div class="skill-level-bar intermediate"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="qualities">
+            <h2>Sifat-Sifat Baik Saya</h2>
+            <div class="qualities">
+                <div class="quality">
+                    <div class="quality-icon">✓</div>
+                    <h3>Detail-Oriented</h3>
+                    <p>Memperhatikan setiap detail dalam kode untuk memastikan kualitas dan performa optimal.</p>
+                </div>
+                
+                <div class="quality">
+                    <div class="quality-icon">🔄</div>
+                    <h3>Adaptif</h3>
+                    <p>Cepat beradaptasi dengan teknologi dan tools pengembangan terbaru.</p>
+                </div>
+                
+                <div class="quality">
+                    <div class="quality-icon">🧠</div>
+                    <h3>Analitis</h3>
+                    <p>Pendekatan sistematis dalam memecahkan masalah pemrograman.</p>
+                </div>
+                
+                <div class="quality">
+                    <div class="quality-icon">🤝</div>
+                    <h3>Kolaboratif</h3>
+                    <p>Berkontribusi efektif dalam tim pengembangan dan code review.</p>
+                </div>
+                
+                <div class="quality">
+                    <div class="quality-icon">📚</div>
+                    <h3>Pembelajar</h3>
+                    <p>Selalu mengupdate pengetahuan dengan tren dan best practices terbaru.</p>
+                </div>
+                
+                <div class="quality">
+                    <div class="quality-icon">⚡</div>
+                    <h3>Efisien</h3>
+                    <p>Menulis kode yang bersih, modular, dan dapat dipelihara.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="projects">
+            <h2>Proyek Terkini</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <h3>Aplikasi Web Python</h3>
+                    <p>Mengembangkan aplikasi manajemen data menggunakan Python dan Flask dengan fitur autentikasi pengguna dan database SQL.</p>
+                </div>
+                <div class="skill">
+                    <h3>Website Portofolio</h3>
+                    <p>Membuat website portofolio responsif dengan HTML5, CSS3, dan JavaScript vanilla.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>Kontak</h2>
+            <p>Jika Anda tertarik untuk berkolaborasi atau memiliki pertanyaan, silakan hubungi saya melalui:</p>
+            <p>📧 Email: <a href="mailto:caesarcaimal@gmail.com">caesarcaimal@gmail.com</a></p>
+            <p>📞 Telepon: <a href="tel:+6281288711935">0812 8871 1935</a></p>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Caesar Caimal - Web Developer & Python Programmer</p>
+        </div>
+    </footer>
+</body>
+</html>
